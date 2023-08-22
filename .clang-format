@@ -1,0 +1,14 @@
+Language: Cpp
+BasedOnStyle: Microsoft
+AccessModifierOffset: '-4'
+BreakBeforeBraces: Allman
+BreakStringLiterals: false
+EmptyLineBeforeAccessModifier: Always
+IncludeBlocks: Merge
+ColumnLimit: 300
+IndentWidth: 4
+AllowShortFunctionsOnASingleLine: Inline
+MaxEmptyLinesToKeep: 1
+PointerAlignment: Left
+UseTab: Never
+TabWidth: 8
