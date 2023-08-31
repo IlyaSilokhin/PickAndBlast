@@ -5,7 +5,7 @@ BreakBeforeBraces: Allman
 BreakStringLiterals: false
 EmptyLineBeforeAccessModifier: Always
 IncludeBlocks: Merge
-ColumnLimit: 300
+ColumnLimit: 200
 IndentWidth: 4
 AllowShortFunctionsOnASingleLine: Inline
 MaxEmptyLinesToKeep: 1

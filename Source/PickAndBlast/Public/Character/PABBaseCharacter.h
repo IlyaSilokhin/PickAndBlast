@@ -4,23 +4,35 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "PABCoreTypes.h"
 #include "PABBaseCharacter.generated.h"
+
+class UPABHealthComponent;
 
 UCLASS()
 class PICKANDBLAST_API APABBaseCharacter : public ACharacter
 {
     GENERATED_BODY()
 
-  public:
+public:
     APABBaseCharacter();
 
-  protected:
+protected:
     virtual void BeginPlay() override;
 
-  public:
+    UPROPERTY(VisibleAnywhere, Category = "Components")
+    UPABHealthComponent* HealthComponent;
+
+public:
     virtual void Tick(float DeltaTime) override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-  private:
+    uint32 ItemTakenTimes = 0;
+
+    FOnScoreChangedSignature OnScoreChanged;
+
+private:
     void MoveRight(float Amount);
+
+    void OnDeath();
 };
